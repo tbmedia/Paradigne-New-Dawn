@@ -1,0 +1,4 @@
+#ExtraRecipes
+shaped(1+1+1/1+1+1/1+1+1)>(3)
+shaped ( stone + stone + stone / stone + stone + stone / stone + stone + stone ) > ( dirt )
+shaped(steelplate+piston+steelplate/chest+circuit+chest/steelplate+battery+steelplate)>(turretplatform)

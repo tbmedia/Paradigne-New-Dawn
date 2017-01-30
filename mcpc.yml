@@ -1,0 +1,203 @@
+# This is the main configuration file for MCPC+.
+# 
+# If you need help with the configuration or have any questions related to MCPC,
+# join us at the IRC or drop by our forums and leave a post.
+# 
+# IRC: #mcportcentral @ irc.esper.net ( http://webchat.esper.net/?channel=mcportcentral )
+# Forums: http://http://www.mcportcentral.co.za/
+# 
+# Setting: logging.entity-collision-checks Default: false   # Whether to log entity collision/count checks
+# Setting: settings.load-chunk-on-forge-tick Default: false   # Forces Chunk Loading during Forge Server Tick events
+# Setting: settings.check-entity-max-speeds Default: false   # Removes any entity that exceeds max speed.
+# Setting: settings.chunk-gc-grace-period Default: 0   # Grace period on a loaded chunk before we try to unload it
+# Setting: logging.connection Default: false   # Log connections
+# Setting: logging.tick-intervals Default: false   # Log when skip interval handlers are ticked
+# Setting: world-settings.default.flowing-lava-decay Default: false   # Lava behaves like vanilla water when source block is removed
+# Setting: logging.dump-threads-on-warn Default: false   # Dump the the server thread on deadlock warning (delps to debug the deadlock)
+# Setting: logging.entity-speed-removal Default: false   # Whether to log entity removals due to speed
+# Setting: settings.entity-max-speed Default: 100   # Square of the max speed of an entity before removing it
+# Setting: settings.check-entity-bounding-boxes Default: false   # Removes an entity that exceeds the max bounding box size.
+# Setting: logging.disabled-warnings Default: false   # Disable warning messages to server admins
+# Setting: world-settings.default.infinite-water-source Default: true   # Vanilla water source behavior - is infinite
+# Setting: logging.world-leak-debug Default: false   # Log worlds that appear to be leaking (buggy)
+# Setting: logging.collision-warn-size Default: 200   # Number of colliding entities in one spot before logging a warning. Set to 0 to disable
+# Setting: logging.entity-count-warn-size Default: 0   # Number of entities in one dimension logging a warning. Set to 0 to disable
+# Setting: settings.load-chunk-async Default: true   # Allow chunks to be loaded async (note: this does not force chunks to load async!)
+# Setting: logging.entity-death Default: false   # Log when an entity is destroyed (dev)
+# Setting: logging.entity-despawn Default: false   # Log when living entities are despawned (dev)
+# Setting: logging.chunk-unload Default: false   # Log when chunks are unloaded (dev)
+# Setting: plugin-settings.default.remap-plugin-file Default: false   # Remap the plugin file (dev)
+# Setting: logging.warn-place-no-tileentity Default: true   # Warn when a mod requests tile entity from a block that doesn't support one
+# Setting: fake-players.do-login Default: false   # Raise login events for fake players
+# Setting: logging.entity-spawn Default: false   # Log when living entities are spawned (dev)
+# Setting: logging.dump-chunks-on-deadlock Default: false   # Dump chunks in the event of a deadlock (helps to debug the deadlock)
+# Setting: settings.load-chunk-on-request Default: true   # Forces Chunk Loading on 'Provide' requests (speedup for mods that don't check if a chunk is loaded
+# Setting: settings.entity-bounding-box-max-size Default: 1000   # Max size of an entity's bounding box before removing it (either being too large or bugged and 'moving' too fast)
+# Setting: settings.dump-materials Default: false   # Dumps all materials with their corresponding id's
+# Setting: logging.chunk-load Default: false   # Log when chunks are loaded (dev)
+# Setting: logging.detailed-logging Default: false   # Add stack traces to dev logging
+# Setting: logging.dump-heap-on-deadlock Default: false   # Dump the heap in the event of a deadlock (helps to debug the deadlock)
+# Setting: settings.override-tile-ticks Default: false   # Global setting to override tile entity tick intervals
+# Setting: debug.thread-contention-monitoring Default: false   # Set true to enable Java's thread contention monitoring for thread dumps
+
+logging:
+  entity-collision-checks: false
+  connection: false
+  tick-intervals: false
+  dump-threads-on-warn: false
+  entity-speed-removal: false
+  disabled-warnings: false
+  world-leak-debug: false
+  collision-warn-size: '200'
+  entity-count-warn-size: '0'
+  entity-death: false
+  entity-despawn: false
+  chunk-unload: false
+  warn-place-no-tileentity: true
+  entity-spawn: false
+  dump-chunks-on-deadlock: false
+  chunk-load: false
+  detailed-logging: false
+  dump-heap-on-deadlock: false
+settings:
+  load-chunk-on-forge-tick: false
+  check-entity-max-speeds: false
+  chunk-gc-grace-period: '0'
+  entity-max-speed: '100'
+  check-entity-bounding-boxes: false
+  load-chunk-async: true
+  load-chunk-on-request: false
+  entity-bounding-box-max-size: '1000'
+  dump-materials: false
+  override-tile-ticks: false
+  fml-missing-mods-message: The server requires mods that are absent or out of date on your client
+world-settings:
+  default:
+    flowing-lava-decay: false
+    infinite-water-source: true
+    despawn-immediate: true
+    worldgen-AppliedEnergistics-AppEng: true
+    worldgen-StargateTech2-CoreWorldGenerator: true
+    worldgen-TC-WorldGenWorld: true
+    worldgen-Natura-BaseTreeWorldgen: true
+    worldgen-GalacticraftCore-GCCoreOverworldGenerator: true
+    worldgen-Natura-BaseCloudWorldgen: true
+    worldgen-ProjectZuluCore-FeatureGenerator: true
+    worldgen-TConstruct-TBaseWorldGenerator: true
+    worldgen-Mariculture-WorldGen: true
+    worldgen-TConstruct-SlimeIslandGen: true
+    worldgen-IC2-IC2: true
+    worldgen-Natura-BaseCropWorldgen: true
+    worldgen-ICBMSentry-OreGenerator: true
+    worldgen-Mariculture-WorldGenHandler: true
+plugin-settings:
+  default:
+    remap-plugin-file: false
+    custom-class-loader: true
+    debug: false
+    use-guava10: true
+    remap-nms-v1_6_R3: true
+    remap-nms-v1_6_R2: true
+    remap-nms-v1_6_R1: true
+    remap-nms-v1_5_R3: true
+    remap-nms-v1_5_R2: true
+    remap-nms-v1_5_R1: true
+    remap-nms-v1_4_R1: true
+    remap-nms-v1_4_6: true
+    remap-nms-pre: 'false'
+    remap-obc-v1_6_R3: false
+    remap-obc-v1_6_R2: false
+    remap-obc-v1_6_R1: false
+    remap-obc-v1_5_R3: true
+    remap-obc-v1_5_R2: true
+    remap-obc-v1_5_R1: true
+    remap-obc-v1_4_R1: false
+    remap-obc-v1_4_6: false
+    remap-obc-pre: false
+    global-inheritance: true
+    plugin-inheritance: true
+    remap-reflect-field: true
+    remap-reflect-class: true
+    remap-allow-future: false
+fake-players:
+  do-login: false
+debug:
+  thread-contention-monitoring: false
+config-version: 1
+world-environment-settings:
+  normal:
+    keep-world-loaded: true
+  nether:
+    keep-world-loaded: true
+  the_end:
+    keep-world-loaded: false
+  storage:
+    keep-world-loaded: false
+  promised:
+    keep-world-loaded: false
+  wyvernend:
+    keep-world-loaded: true
+  gccorespacestation:
+    keep-world-loaded: false
+  gcmoon:
+    keep-world-loaded: false
+  gcmars:
+    keep-world-loaded: false
+tick-intervals:
+  ic2:
+    core:
+      IC2: 1
+  mods:
+    immibis:
+      core:
+        MainThreadTaskQueue$1: 1
+        commands:
+          TPSCommand$TickHandler: 1
+  universalelectricity:
+    core:
+      net:
+        NetworkTickHandler: 1
+  codechicken:
+    nei:
+      ServerHandler: 1
+    wirelessredstone:
+      core:
+        WRCoreEventHandler: 1
+      addons:
+        WRAddonEventHandler: 1
+    multipart:
+      handler:
+        MultipartEventHandler$: 1
+    lib:
+      world:
+        WorldExtensionManager$WorldExtensionServerTickHandler: 1
+  appeng:
+    sided:
+      AEGenericTick: 1
+    common:
+      grid:
+        MEGridEvents: 1
+  dan200:
+    computer:
+      shared:
+        ComputerCraftProxyCommon$ForgeHandlers: 1
+  mekanism:
+    api:
+      transmitters:
+        TransmitterNetworkRegistry: 1
+  openblocks:
+    common:
+      ServerTickHandler: 1
+  buildcraft:
+    core:
+      TickHandlerCoreClient: 1
+  biomesoplenty:
+    handlers:
+      TickHandlerClient: 1
+      TickHandlerServer: 1
+  micdoodle8:
+    mods:
+      galacticraft:
+        core:
+          tick:
+            GCCoreTickHandlerServer: 1
